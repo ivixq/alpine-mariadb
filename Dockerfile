@@ -1,5 +1,4 @@
-FROM alpine-s6
-#FROM ivixq/alpine-s6-edge
+FROM ivixq/alpine-s6
 MAINTAINER ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
