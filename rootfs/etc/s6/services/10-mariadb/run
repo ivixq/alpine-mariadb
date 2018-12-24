@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+## Debug Mode
+if [ "$DEBUG_MODE" = "TRUE" ] || [ "$DEBUG_MODE" = "true" ];  then
+    set -x
+fi
+
+while [ ! -f /tmp/state/99-container-init ]
+do
+    sleep 1
+done
+
+echo "[i] Starting Mariadb Server"
+su-exec mysql mysqld_safe
