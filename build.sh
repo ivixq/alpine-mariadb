@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t alpine-s6-mariadb .
+docker build -t ivixq/alpine-s6-mariadb .

@@ -5,8 +5,14 @@ if [ "$DEBUG_MODE" = "TRUE" ] || [ "$DEBUG_MODE" = "true" ];  then
     set -x
 fi
 
+## Set Defaults
+ROOT_PASSWORD=${ROOT_PASSWORD:-"123456"}
+SQL_MODE=${SQL_MODE:-"STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"} 
+
 ## Update for Zabbix Monitoring
 sed -i -e "s/<ROOT_PASSWORD>/$MYSQL_ROOT_PASSWORD/g" /etc/zabbix/.my.cnf
+sed -i -e "s/<SQL_MODE>/$SQL_MODE/g" /etc/my.cnf
+
 chmod 0700 /etc/zabbix/.my.cnf
 chown -R zabbix /etc/zabbix
 
