@@ -3,10 +3,12 @@ MAINTAINER ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
 
-RUN apk add --update \
+RUN apk --no-cache upgrade && \
+    apk --no-cache add \
         mariadb \
         mariadb-client \
-        pwgen && \   
+        pwgen \
+        && \   
     rm -rf /var/cache/apk/* 
 
 COPY rootfs /
