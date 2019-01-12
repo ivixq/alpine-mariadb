@@ -3,8 +3,8 @@ MAINTAINER ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
 
-RUN apk --no-cache upgrade && \
-    apk --no-cache add \
+RUN apk update && apk upgrade --available && \
+    apk add --update \
         mariadb \
         mariadb-client \
         pwgen \
@@ -16,4 +16,3 @@ COPY rootfs /
 ENV TERM xterm
 
 EXPOSE 3306
-
