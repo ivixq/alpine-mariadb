@@ -3,7 +3,8 @@ MAINTAINER ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
 
-RUN apk update && apk upgrade --available && \
+RUN apk -no-cache update && \
+    apk upgrade --available && \
     apk add --update \
         mariadb \
         mariadb-client \
