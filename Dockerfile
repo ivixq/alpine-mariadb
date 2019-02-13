@@ -1,4 +1,4 @@
-FROM ivixq/alpine-s6
+FROM ivixq/alpine-s6:3.9
 LABEL maintainer=ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
