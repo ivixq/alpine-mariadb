@@ -1,7 +1,6 @@
 #!/usr/bin/with-contenv bash
-
 if [ "$DEBUG_MODE" = "TRUE" ] || [ "$DEBUG_MODE" = "true" ];  then
-    set -x
+  set -x
 fi
 
 MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-"123456"}

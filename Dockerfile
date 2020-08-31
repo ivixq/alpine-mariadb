@@ -1,4 +1,4 @@
-FROM ivixq/alpine-s6:3.11
+FROM registry.cn-shenzhen.aliyuncs.com/ivixq/alpine-s6:edge
 LABEL maintainer=ivixq
 
 ENV ZABBIX_HOSTNAME=mariadb
