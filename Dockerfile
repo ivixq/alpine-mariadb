@@ -12,7 +12,7 @@ RUN apk --no-cache update ; \
         ; \   
     rm -rf /var/cache/apk/* 
 
-COPY rootfs /
+ADD /install /
 
 ENV TERM xterm
 
